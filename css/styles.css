@@ -88,16 +88,11 @@ text-portfolio пепельный текст в портфолио"*/
     font-family: Roboto, sans-serif;
   font-size: 14px;}
 
-/*html {
-    box-sizing: border-box;
-}*/
+html {box-sizing: border-box;}
 
 *,
 *::after,
-*::before {
-   /* box-sizing: inherit;*/
-box-sizing: border-box;
-}
+*::before {box-sizing: inherit;}
 
 img {
     display: block;
@@ -119,15 +114,14 @@ ul {
   /*Header*/
 
     
-
-
 .container {width: 1200px;
             padding:0 15px; 
             margin:0 auto;}
             
 .nav-container {display: flex;
                 align-items: center;
-                border-bottom: 1px rgba(236, 236, 236, 1);}
+                border-bottom: 1px solid #ECECEC;}
+         
 
 
 .heder-nav{display: flex;}
@@ -239,6 +233,16 @@ ul {
                  padding: 10px 32px;
                  text-align: center;}
 
+/*класс для невидимых заголовков*/
+.specter-visually-hidden {position: absolute;
+                          width: 1px;
+                          height: 1px;
+                          margin: -1px;
+                          padding: 0;
+                          overflow: hidden;
+                          border: 0;
+                          clip: rect(0 0 0 0);}
+
 /*------- мейн для портфолио---------*/
 /*список кнопок все, веб- сайты...*/
 .button-list{ display: flex;
@@ -296,12 +300,11 @@ ul {
           padding-right: 24px;
           padding-top: 20px;
           padding-bottom: 20px;
-          background-color: #fff;
           border-left: 1px solid #EEEEEE;
           border-right: 1px solid #EEEEEE;
           border-bottom: 1px solid #EEEEEE;}
 
-.cur-pic img {width: 100%;
+.cur-pic {width: 100%;
               height: auto;
               vertical-align: top;}
 
@@ -309,7 +312,8 @@ ul {
 .title-portfolio {font-weight: 700;
                   font-size: 18px;
                   line-height: 2;
-                  letter-spacing: 0.06em;}
+                  letter-spacing: 0.06em;
+                  margin-bottom: 4px; }
 
 .text-portfolio {color: var(--color-text);
                  font-size: 16px;
@@ -322,17 +326,23 @@ ul {
 .section {display: flex;
           padding-top: 94px;
           padding-bottom: 94px;
-          justify-content: center;}
+}
+
+.liner-box{display: flex;}
 
 .liner { display: block;
         text-decoration: none;
         list-style: none;
         width: 270px;
-        float: left;
         margin-top: 0;}
-.border{box-shadow: 0px 1px 3px;
-        border-radius: 0px 0px 4px 4px;}
-
+.liner-border{box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+              0px 1px 1px rgba(0, 0, 0, 0.14),
+              0px 2px 1px rgba(0, 0, 0, 0.2);
+              border-radius: 0px 0px 4px 4px;
+              list-style: none;
+              background-color: var(--color-heder);}
+              .liner-border:not(:last-child) {margin-right:30px;}            
+              
 
 .liner:not(:last-child){margin-right: 30px;}          
 
@@ -377,8 +387,7 @@ ul {
                 text-decoration: none;
                 list-style: none;
                 width: 370px;
-                float: left;
-                padding-top: 0;}
+                padding-top:  0;}
 
 .liner-second:not(:last-child) {margin-right: 30px;}
 
@@ -424,16 +433,14 @@ ul {
       line-height: 1.7;
       letter-spacing: 0.03em;
       text-decoration: none;}
-      .map:not(last-child) {padding-bottom: 9px;}
+     
 
 
   .map:hover{ color: var(--color-web);}
 
-  .map-fact{padding-top: 20px;
-            color: var(--color-heder);
-            text-decoration: none;
-            padding-bottom: 9px}
-
+  .map-fact{color: var(--color-heder);
+            text-decoration: none; }
+.map-box:not(last-child) {margin-bottom:9px;}
      
 
 
