@@ -113,14 +113,13 @@ ul {
 
   /*Header*/
 
-    
+.bord {border-bottom: 1px solid #ECECEC;}
 .container {width: 1200px;
             padding:0 15px; 
             margin:0 auto;}
             
 .nav-container {display: flex;
-                align-items: center;
-                border-bottom: 1px solid #ECECEC;}
+                align-items: center;}
          
 
 
